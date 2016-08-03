@@ -1,0 +1,22 @@
+Stocks
+
+User
+user_id - user_name - user_balance
+CREATE TABLE User (user_id integer primary key, user_name text, user_balance integer);
+
+Friends
+friend_id - friend_name - friend_symbol - friend_price
+CREATE TABLE Friends (friend_id integer primary key autoincrement, friend_name text, friend_symbol text, friend_price integer, last_close integer);
+
+
+OwnedStocks
+friend_id - amount_owned - bought_price
+CREATE TABLE OwnedStocks (friend_id integer, amount_owned integer, bought_price integer);
+
+
+Transactions
+trans_id - friend_id - price_set
+CREATE TABLE Transactions (trans_id integer primary key autoincrement, friend_id integer, price_set integer);
+
+
+
